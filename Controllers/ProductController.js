@@ -140,7 +140,7 @@ export const deleteProduct = async (req, res) => {
       } else if (type === 'nombre') {
         searchCondition = { ProductName: { [Op.like]: `%${query}%` } };
       } else if (type === 'Descripcion') {
-        searchCondition = { Descripcion1: { [Op.like]: `%${query}%` } };
+        searchCondition = { Descripiton1: { [Op.like]: `%${query}%` } };
       } else {
         return res.status(400).json({ message: 'Tipo de búsqueda no válido' });
       }
