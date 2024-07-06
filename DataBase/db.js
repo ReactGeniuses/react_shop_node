@@ -14,7 +14,11 @@ const db = new Sequelize({
       trustServerCertificate: false,
     },
   },
-  connectionString: 'Server=tcp:eu-az-sql-serv1.database.windows.net;Initial Catalog=shopshop;Persist Security Info=False;User ID=shopshop;Password=DQ@20241a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;',
+  host: 'eu-az-sql-serv1.database.windows.net',
+  database: 'shopshop',
+  username: 'shopshop',
+  password: 'DQ@20241a',
+  port: process.env.PORT || 1433, // Usa process.env.PORT o un puerto por defecto
   logging: false, // Desactiva el registro de consultas SQL en la consola (opcional)
 });
 
