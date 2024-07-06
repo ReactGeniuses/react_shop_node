@@ -8,9 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "DQ",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "date-fns": "^3.6.0",
@@ -19,5 +18,15 @@
     "multer": "^1.4.5-lts.1",
     "sequelize": "^6.37.3",
     "tedious": "^18.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReactGeniuses/react_shop_node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ReactGeniuses/react_shop_node/issues"
+  },
+  "homepage": "https://github.com/ReactGeniuses/react_shop_node#readme",
+  "description": ""
 }
