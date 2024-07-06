@@ -6,10 +6,9 @@ import { Sequelize } from 'sequelize';
   logging: false, // Desactiva el registro de consultas SQL en la consola (opcional)
 }); */
 
-const db = new Sequelize('shopshop', 'shopshop', 'DQ@20241a', {
-  host: 'eu-az-sql-serv1.database.windows.net',
-  dialect: 'mssql',
-  logging: false, ////Desactiva el registro de consultas SQL en la consola (opcional)
+const db = new Sequelize(process.env.DATABASE_URL, {
+  dialect: 'postgres', // Asegúrate de usar el dialecto correcto para PostgreSQL en Heroku
+  logging: false, // Desactiva el registro de consultas SQL en la consola (opcional)
 });
 
 export default db;
