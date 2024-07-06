@@ -14,7 +14,7 @@ const db = new Sequelize({
       trustServerCertificate: false,
     },
   },
-  connectionString: 'Server=tcp:eu-az-sql-serv1.database.windows.net,1433;Initial Catalog=shopshop;Persist Security Info=False;User ID=shopshop;Password=DQ@20241a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;',
+  connectionString: 'Server=tcp:eu-az-sql-serv1.database.windows.net;Initial Catalog=shopshop;Persist Security Info=False;User ID=shopshop;Password=DQ@20241a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;',
   logging: false, // Desactiva el registro de consultas SQL en la consola (opcional)
 });
 
