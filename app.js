@@ -26,13 +26,15 @@ app.use("/direccion", DireccionModel);
 app.use("/wish", WishlistRoutes);
 app.use("/card", CardRoute);
 
+const PORT = process.env.PORT || 8000; // Heroku proporciona el puerto a través de process.env.PORT
+app.listen(PORT, () => {
+  console.log(`Server UP running on http://localhost:${PORT}/`);
+});
+
+// Asegúrate de que las configuraciones de la base de datos estén adecuadamente manejadas según las variables de entorno de Heroku
 try {
   await db.authenticate();
   console.log("Conexión exitosa a la DB");
 } catch (error) {
-  console.log(`El error de conexión es: ${error}`);
+  console.error(`Error de conexión a la DB: ${error}`);
 }
-
-app.listen(8080, () => {
-  console.log("Server UP running in http://localhost:8000/");
-});
