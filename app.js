@@ -12,7 +12,6 @@ import DireccionModel from "./Routes/DireccionRoute.js";
 import WishlistRoutes from "./Routes/WishlistRoutes.js";
 import CardRoute from "./Routes/CardRoute.js";
 
-
 const app = express();
 
 app.use(cors());

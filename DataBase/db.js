@@ -1,10 +1,4 @@
-import { Sequelize } from 'sequelize';
-
-/* const db = new Sequelize('Proyecto', 'prueba', '12345', {
-  host: 'BIBLIO-404787',
-  dialect: 'mssql',
-  logging: false, // Desactiva el registro de consultas SQL en la consola (opcional)
-}); */
+const { Sequelize } = require('sequelize');
 
 const db = new Sequelize({
   dialect: 'mssql',
@@ -18,8 +12,20 @@ const db = new Sequelize({
   database: 'shopshop',
   username: 'shopshop',
   password: 'DQ@20241a',
-  port: process.env.PORT || 1433, // Usa process.env.PORT o un puerto por defecto
-  logging: false, // Desactiva el registro de consultas SQL en la consola (opcional)
+  port: process.env.PORT || 1433,
+  logging: false,
 });
 
-export default db;
+// Verificar la conexión
+async function testConnection() {
+  try {
+    await db.authenticate();
+    console.log('Conexión establecida correctamente.');
+  } catch (error) {
+    console.error('Error al conectar:', error);
+  }
+}
+
+testConnection();
+
+module.exports = db;
